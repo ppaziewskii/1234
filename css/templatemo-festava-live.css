@@ -1,0 +1,285 @@
+:root {
+  --white-color:                  #000000; /* Główny kolor tła */
+  --secondary-color:              #ffffff; /* Kolor linków */
+  --section-bg-color:             #ffffff; /* Kolor tła sekcji */
+  --custom-btn-bg-color:          #ffffff; /* Kolor tła przycisku (np. Instagram) */
+  
+  --dark-color:                   #000000; /* Kolor ciemny (czarne tło) */
+  --p-color:                      #ffffff; /* Kolor tekstu akapitów */
+  --border-color:                 #7fffd4; /* Kolor obramowania */
+  --link-hover-color:             #ffffff; /* Kolor linków po najechaniu myszką */
+
+  --body-font-family:             'Outfit', sans-serif; /* Czcionka dla całego dokumentu */
+
+  /* Rozmiary czcionek */
+  --h1-font-size:                 74px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  18px;
+  --btn-font-size:                14px; 
+  --copyright-font-size:          16px;
+
+  /* Promień zaokrąglenia */
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  /* Waga czcionek */
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-bold:             700;
+}
+body {
+  background-color: var(--white-color); /* Ustawia kolor tła na zmienną --white-color */
+  font-family: var(--body-font-family); /* Ustawia czcionkę na Outfit */
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color); /* Ustawia ciemny kolor dla nagłówków */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold); /* Ustawia nagłówki na pogrubione */
+}
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+h4 { font-size: var(--h4-font-size); }
+h5 { font-size: var(--h5-font-size); }
+h6 { font-size: var(--h6-font-size); }
+p {
+  color: var(--p-color); /* Ustawia kolor tekstu akapitu */
+  font-size: var(--p-font-size); /* Ustawia rozmiar czcionki */
+  font-weight: var(--font-weight-light); /* Ustawia lekką wagę czcionki */
+}
+
+ul li {
+  color: var(--p-color); /* Ustawia kolor tekstu listy */
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+a, 
+button {
+  touch-action: manipulation; /* Poprawia responsywność na ekranach dotykowych */
+  transition: all 0.3s; /* Animacja zmiany wyglądu */
+}
+
+a {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color); /* Zmienia kolor linku po najechaniu */
+}
+.link-fx-1 {
+  color: var(--white-color); /* Biały kolor linku */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 6px;
+  text-decoration: none;
+}
+
+.link-fx-1:hover {
+  color: var(--link-hover-color); /* Po najechaniu link zmienia kolor */
+}
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-bg {
+  background-color: var(--section-bg-color); /* Ustawia tło sekcji */
+}
+
+.section-overlay {
+  background-color: var(--dark-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35; /* Przezroczysta warstwa */
+}
+.tab-content {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 45px;
+}
+
+.nav-tabs {
+  background-color: var(--section-bg-color);
+  border-radius: var(--border-radius-large);
+  padding: 15px;
+}
+.custom-btn {
+  background: var(--custom-btn-bg-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-bold);
+  padding: 10px 20px;
+}
+.sticky-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-top: 51px;
+}
+
+.sticky-wrapper.is-sticky .navbar {
+  background-color: var(--dark-color);
+}
+
+
+.navbar-nav .nav-link {
+  color: var(--white-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+.navbar-toggler {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 35px;
+}
+
+.navbar-toggler .navbar-toggler-icon:before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(-45deg);
+}
+
+
+.site-footer-top {
+  background-color: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar {
+  display: none;
+}
+
+.fixed-instagram {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.fixed-instagram:hover {
+  background-color: rgb(78, 78, 78);
+  color: rgb(255, 255, 255);
+}
+
+
+/* sigma sigma sigma sigma sigma sigma sigma sigma sigma sigma sigma */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px; /* Nadaje owalny kształt */
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 25px; /* Zaokrągla zdjęcie */
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* Efekt lekkiego powiększenia */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Ciemne tło */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Domyślnie ukryte */
+  transition: opacity 0.3s ease;
+  border-radius: 25px; /* Zachowuje zaokrąglenie */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Pokazuje tło po najechaniu */
+}
+
+.view-more-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: gray;
+  color: white;
+}
+
+.container.d-flex {
+  flex-wrap: wrap; /* Zapewnia zawijanie przycisków na mniejszych ekranach */
+  justify-content: center; /* Centruje przyciski */
+}
+
+@media (max-width: 768px) {
+
+  .btn-custom-oval {
+      min-width: 100%; /* Przyciski zajmują całą szerokość ekranu */
+      max-width: 90%;
+  }
+
+  .container.d-flex {
+      flex-direction: column; /* Przyciski układają się jeden pod drugim */
+  }
+}
+
+@media (max-width: 768px) {
+   body {
+      background-size: 100% auto;
+}
+}
